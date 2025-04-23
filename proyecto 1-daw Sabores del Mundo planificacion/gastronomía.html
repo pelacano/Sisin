@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores del Mundo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-amber-600 text-white p-4">
+        <h1 class="text-2xl font-bold text-center">SABORES DEL MUNDO</h1>
+        <nav class="relative">
+            <!-- Botón de menú hamburguesa -->
+            <button class="text-white text-2xl md:hidden focus:outline-none absolute top-2 right-4" onclick="toggleMenu()">&#9776;</button>
+            <!-- Menú -->
+            <ul id="menu" class="hidden flex flex-col items-center space-y-2 mt-4 md:flex md:flex-row md:justify-center md:space-x-6 md:mt-0">
+                <li><a href="acerca de.html" class="hover:underline">Acerca de</a></li>
+                <li><a href="recetas.html" class="hover:underline">Recetas</a></li>
+                <li><a href="inicio.html" class="hover:underline">Inicio</a></li>
+                <li><a href="cuenta.html" class="hover:underline">Cuenta</a></li>
+                <li><a href="gastronomía.html" class="hover:underline">Gastronomía</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('hidden');
+        }
+    </script>
+
+
+    <main class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+        <!-- Filtros por continente -->
+        <div class="mb-12 text-center">
+            <h2 class="text-2xl font-bold mb-6">Explora Gastronomías del Mundo</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Asia -->
+                <a href="#asiatica" class="block group">
+                    <div class="bg-amber-50 p-4 rounded-lg hover:bg-amber-100 transition">
+                        <img src="assets/images/descarga.jpg" 
+                             alt="Comida asiática" 
+                             class="w-full h-32 object-cover rounded-md mb-2">
+                        <h3 class="font-bold text-amber-800 group-hover:text-amber-600">Asiática</h3>
+                        <p class="text-sm text-gray-600">Sushi, curry, ramen...</p>
+                    </div>
+                </a>
+
+                <!-- Europa -->
+                <a href="#europea" class="block group">
+                    <div class="bg-amber-50 p-4 rounded-lg hover:bg-amber-100 transition">
+                        <img src="assets/images/OIP euro(1).jpg" 
+                             alt="Comida europea" 
+                             class="w-full h-32 object-cover rounded-md mb-2">
+                        <h3 class="font-bold text-amber-800 group-hover:text-amber-600">Europea</h3>
+                        <p class="text-sm text-gray-600">Paella, pasta, ratatouille...</p>
+                    </div>
+                </a>
+
+                <!-- África -->
+                <a href="#africana" class="block group">
+                    <div class="bg-amber-50 p-4 rounded-lg hover:bg-amber-100 transition">
+                        <img src="assets/images/photo-1604329760661-e71dc83f8f26.avif" 
+                             alt="Comida africana" 
+                             class="w-full h-32 object-cover rounded-md mb-2">
+                        <h3 class="font-bold text-amber-800 group-hover:text-amber-600">Africana</h3>
+                        <p class="text-sm text-gray-600">Tajín, injera, jollof rice...</p>
+                    </div>
+                </a>
+
+                <!-- Latinoamérica -->
+                <a href="#latina" class="block group">
+                    <div class="bg-amber-50 p-4 rounded-lg hover:bg-amber-100 transition">
+                        <img src="assets/images/photo-1615870216519-2f9fa575fa5c.avif" 
+                             alt="Comida latina" 
+                             class="w-full h-32 object-cover rounded-md mb-2">
+                        <h3 class="font-bold text-amber-800 group-hover:text-amber-600">Latinoamericana</h3>
+                        <p class="text-sm text-gray-600">Tacos, ceviche, feijoada...</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Sección de descripción -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold mb-4">La Gastronomía como Cultura</h2>
+            <p class="text-gray-700 mb-4">
+                La gastronomía es la expresión cultural de la alimentación, combinando ingredientes, sabores y técnicas culinarias. Refleja historia, tradiciones e innovación, evolucionando con el tiempo y adaptándose a nuevas influencias.
+            </p>
+            <p class="text-gray-700">
+                Más que cocinar, es una experiencia sensorial que conecta a las personas, fomenta la creatividad y resalta la diversidad culinaria. Su impacto va más allá del placer de comer, influyendo en la identidad, la economía y el desarrollo social.
+            </p>
+        </section>
+
+        <!-- Secciones por tipo de gastronomía (enlaces internos) -->
+        <div id="asiatica" class="py-8 border-t">
+            <h3 class="text-xl font-bold mb-4 flex items-center">
+                <i class="fas fa-utensils text-amber-600 mr-2"></i> Gastronomía Asiática
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <img src="assets/images/descarga.jpg" 
+                         alt="Sushi" 
+                         class="w-full h-48 object-cover rounded-lg">
+                </div>
+                <div>
+                    <h4 class="font-bold mb-2">Recetas destacadas:</h4>
+                    <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                        <li><a href="#" class="text-amber-600 hover:underline">Ramen de cerdo</a></li>
+                        <li><a href="#" class="text-amber-600 hover:underline">Pad Thai</a></li>
+                        <li><a href="#" class="text-amber-600 hover:underline">Curry verde tailandés</a></li>
+                    </ul>
+                    <a href="/recetas.html" class="inline-block mt-4 text-amber-600 hover:underline">
+                        Ver todas <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="europea" class="py-8 border-t">
+            <h3 class="text-xl font-bold mb-4 flex items-center">
+                <i class="fas fa-cheese text-amber-600 mr-2"></i> Gastronomía Europea
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <img src="assets/images/OIP euro(1).jpg" 
+                         alt="Paella" 
+                         class="w-full h-48 object-cover rounded-lg">
+                </div>
+                <div>
+                    <h4 class="font-bold mb-2">Recetas destacadas:</h4>
+                    <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                        <li><a href="#" class="text-amber-600 hover:underline">Paella valenciana</a></li>
+                        <li><a href="#" class="text-amber-600 hover:underline">Ratatouille</a></li>
+                        <li><a href="#" class="text-amber-600 hover:underline">Goulash húngaro</a></li>
+                    </ul>
+                    <a href="recetas.html" class="inline-block mt-4 text-amber-600 hover:underline">
+                        Ver todas <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="africana" class="py-8 border-t">
+            <h3 class="text-xl font-bold mb-4 flex items-center">
+                <i class="fas fa-pepper-hot text-amber-600 mr-2"></i> Gastronomía Africana
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <img src="assets/images/photo-1604329760661-e71dc83f8f26.avif" 
+                         alt="Tajín" 
+                         class="w-full h-48 object-cover rounded-lg">
+                </div>
+                <div>
+                    <h4 class="font-bold mb-2">Recetas destacadas:</h4>
+                    <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                        <li><a href="#" class="text-amber-600 hover:underline">Tajín de cordero</a></li>
+                        <li><a href="#" class="text-amber-600 hover:underline">Injera con wat</a></li>
+                        <li><a href="#" class="text-amber-600 hover:underline">Jollof rice</a></li>
+                    </ul>
+                    <a href="recetas.html" class="inline-block mt-4 text-amber-600 hover:underline">
+                        Ver todas <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="latina" class="py-8 border-t">
+            <h3 class="text-xl font-bold mb-4 flex items-center">
+                <i class="fas fa-avocado text-amber-600 mr-2"></i> Gastronomía Latinoamericana
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <img src="assets/images/photo-1615870216519-2f9fa575fa5c.avif" 
+                         alt="Tacos" 
+                         class="w-full h-48 object-cover rounded-lg">
+                </div>
+                <div>
+                    <h4 class="font-bold mb-2">Recetas destacadas:</h4>
+                    <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                        <li><a href="#" class="text-amber-600 hover:underline">Tacos al pastor</a></li>
+                        <li><a href="#" class="text-amber-600 hover:underline">Ceviche peruano</a></li>
+                        <li><a href="#" class="text-amber-600 hover:underline">Feijoada brasileña</a></li>
+                    </ul>
+                    <a href="recetas.html" class="inline-block mt-4 text-amber-600 hover:underline">
+                        Ver todas <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-4 mt-12">
+        <p>© 2023 Sabores del Mundo - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

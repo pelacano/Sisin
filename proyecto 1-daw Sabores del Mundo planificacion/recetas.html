@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores del Mundo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-amber-600 text-white p-4">
+        <h1 class="text-2xl font-bold text-center">SABORES DEL MUNDO</h1>
+        <nav class="relative">
+            <!-- Botón de menú hamburguesa -->
+            <button class="text-white text-2xl md:hidden focus:outline-none absolute top-2 right-4" onclick="toggleMenu()">&#9776;</button>
+            <!-- Menú -->
+            <ul id="menu" class="hidden flex flex-col items-center space-y-2 mt-4 md:flex md:flex-row md:justify-center md:space-x-6 md:mt-0">
+                <li><a href="acerca de.html" class="hover:underline">Acerca de</a></li>
+                <li><a href="recetas.html" class="hover:underline">Recetas</a></li>
+                <li><a href="inicio.html" class="hover:underline">Inicio</a></li>
+                <li><a href="cuenta.html" class="hover:underline">Cuenta</a></li>
+                <li><a href="gastronomía.html" class="hover:underline">Gastronomía</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('hidden');
+        }
+    </script>
+
+    <main class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+        <!-- Barra de búsqueda -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold mb-2">Buscar recetas</h2>
+            <div class="relative">
+                <input 
+                    type="text" 
+                    placeholder="Ej: Tofu, Pasta, Ensalada..." 
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                >
+                <button class="absolute right-2 top-2 text-amber-600">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+         <!-- Botón de añadir receta -->
+    <div class="flex justify-end mt-4 mr-6">
+        <button class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">
+            + Añadir Receta
+        </button>
+    </div>
+
+    <main class="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-6">
+        <h2 class="text-xl font-bold text-amber-700">Recetas destacadas</h2>
+
+        <!-- Recetas con imágenes -->
+        <section class="space-y-12">
+            <!-- Receta 1 -->
+            <div id="tostadas" class="border-b pb-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="assets/images/OSK23342(1).jpg" 
+                             alt="Tostadas mexicanas" 
+                             class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4">Tostadas mexicanas con tofu picante</h2>
+                        <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+                            <li>Tofu firme: 350 g</li>
+                            <li>Cebolla morada</li>
+                            <li>Chile chipotle en adobo: 2</li>
+                            <li>Tortillas de maíz: 6</li>
+                            <li>Aguacate: 1</li>
+                        </ul>
+                        <div class="flex items-center text-amber-500 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="text-gray-600 ml-2">(24 reseñas)</span>
+                        </div>
+                        <a href="Paella.html" class="inline-block mt-2 text-amber-600 hover:underline font-medium">
+                            Ver receta completa <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Receta 2 -->
+            <div id="ramen" class="border-b pb-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="assets/images/OSK.jpg" 
+                             alt="Ramen de cerdo" 
+                             class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4">Ramen de Cerdo Japones</h2>
+                        <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+                            <li>Fideos ramen: 200 g</li>
+                            <li>Cerdo belly: 150 g</li>
+                            <li>Huevo: 1</li>
+                            <li>Caldo dashi: 500 ml</li>
+                            <li>Brotes de bambú</li>
+                        </ul>
+                        <div class="flex items-center text-amber-500 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 ml-2">(36 reseñas)</span>
+                        </div>
+                        <a href="Paella.html" class="inline-block mt-2 text-amber-600 hover:underline font-medium">
+                            Ver receta completa <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Receta 3 -->
+            <div id="paella" class="border-b pb-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="assets/images/OIP999 (1).jpg" 
+                             alt="Paella valenciana" 
+                             class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4">Paella Valenciana</h2>
+                        <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+                            <li>Arroz bomba: 300 g</li>
+                            <li>Conejo: 200 g</li>
+                            <li>Gambas: 100 g</li>
+                            <li>Azafrán</li>
+                            <li>Pimiento rojo</li>
+                        </ul>
+                        <div class="flex items-center text-amber-500 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span class="text-gray-600 ml-2">(18 reseñas)</span>
+                        </div>
+                        <a href="Paella.html" class="inline-block mt-2 text-amber-600 hover:underline font-medium">
+                            Ver receta completa <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Receta 4 -->
+            <div id="hummus" class="pb-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="assets/images/descarga 44444(1).jpg" 
+                             alt="Hummus libanés" 
+                             class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4">Hummus Libanés</h2>
+                        <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+                            <li>Garbanzos cocidos: 400 g</li>
+                            <li>Tahini: 3 cucharadas</li>
+                            <li>Ajo: 1 diente</li>
+                            <li>Comino molido</li>
+                            <li>Zumo de limón</li>
+                        </ul>
+                        <div class="flex items-center text-amber-500 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="text-gray-600 ml-2">(29 reseñas)</span>
+                        </div>
+                        <a href="Paella.html" class="inline-block mt-2 text-amber-600 hover:underline font-medium">
+                            Ver receta completa <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Valoraciones -->
+        <section class="mt-16">
+            <h2 class="text-2xl font-bold mb-6">Valoraciones de la comunidad</h2>
+            
+            <div class="space-y-6">
+                <!-- Reseña 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-2">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" 
+                             alt="Usuario" 
+                             class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">María G.</h4>
+                            <div class="flex text-amber-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-2">"Las tostadas de tofu son mi receta favorita para cenas rápidas. ¡El chipotle le da un toque perfecto!"</p>
+                    <p class="text-gray-500 text-sm">Publicado el 12/05/2023</p>
+                </div>
+                
+                <!-- Reseña 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-2">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+                             alt="Usuario" 
+                             class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">Carlos R.</h4>
+                            <div class="flex text-amber-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-2">"El ramen quedó espectacular, aunque le añadí un poco más de miso. ¡Gracias por la receta base!"</p>
+                    <p class="text-gray-500 text-sm">Publicado el 28/04/2023</p>
+                </div>
+            </div>
+
+            <!-- Formulario de reseña -->
+            <div class="mt-12 bg-amber-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold mb-4">Añade tu valoración</h3>
+                <form class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-gray-700 mb-1">Nombre</label>
+                            <input type="text" class="w-full px-4 py-2 border rounded-lg">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-1">Receta</label>
+                            <select class="w-full px-4 py-2 border rounded-lg">
+                                <option>Selecciona una receta</option>
+                                <option>Tostadas mexicanas</option>
+                                <option>Ramen de cerdo</option>
+                                <option>Paella valenciana</option>
+                                <option>Hummus libanés</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Valoración</label>
+                        <div class="flex space-x-1 text-2xl text-gray-300">
+                            <i class="fas fa-star hover:text-amber-400 cursor-pointer"></i>
+                            <i class="fas fa-star hover:text-amber-400 cursor-pointer"></i>
+                            <i class="fas fa-star hover:text-amber-400 cursor-pointer"></i>
+                            <i class="fas fa-star hover:text-amber-400 cursor-pointer"></i>
+                            <i class="fas fa-star hover:text-amber-400 cursor-pointer"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Comentario</label>
+                        <textarea rows="4" class="w-full px-4 py-2 border rounded-lg"></textarea>
+                    </div>
+                    <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg transition">
+                        Enviar reseña
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-12">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Sabores del Mundo</h3>
+                <p>Descubre la magia de la cocina global en un solo lugar.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Explorar</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-amber-400 transition">Inicio</a></li>
+                    <li><a href="gastronomia.html" class="hover:text-amber-400 transition">Gastronomías</a></li>
+                    <li><a href="recetas.html" class="hover:text-amber-400 transition">Recetas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Compañía</h4>
+                <ul class="space-y-2">
+                    <li><a href="acerca.html" class="hover:text-amber-400 transition">Acerca de</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition">Contacto</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-amber-400 transition">Términos</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition">Privacidad</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+            <p>© 2023 Sabores del Mundo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+

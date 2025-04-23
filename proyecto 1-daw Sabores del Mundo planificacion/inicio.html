@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores del Mundo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-amber-600 text-white p-4">
+        <h1 class="text-2xl font-bold text-center">SABORES DEL MUNDO</h1>
+        <nav class="relative">
+            <!-- Botón de menú hamburguesa -->
+            <button class="text-white text-2xl md:hidden focus:outline-none absolute top-2 right-4" onclick="toggleMenu()">&#9776;</button>
+            <!-- Menú -->
+            <ul id="menu" class="hidden flex flex-col items-center space-y-2 mt-4 md:flex md:flex-row md:justify-center md:space-x-6 md:mt-0">
+                <li><a href="acerca de.html" class="hover:underline">Acerca de</a></li>
+                <li><a href="recetas.html" class="hover:underline">Recetas</a></li>
+                <li><a href="inicio.html" class="hover:underline">Inicio</a></li>
+                <li><a href="cuenta.html" class="hover:underline">Cuenta</a></li>
+                <li><a href="gastronomía.html" class="hover:underline">Gastronomía</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('hidden');
+        }
+    </script>
+
+    <main class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+        <!-- Barra de búsqueda -->
+        <div class="flex justify-between items-center mb-8">
+            <nav>
+                <a href="#" class="hover:underline font-medium">Inicio</a>
+            </nav>
+            <div class="relative w-1/2">
+                <input 
+                    type="text" 
+                    placeholder="Buscar recetas..." 
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                >
+                <button class="absolute right-3 top-2 text-amber-600">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Galería de imágenes -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold mb-6 text-center">Descubre la Gastronomía Global</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Imagen 1 -->
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition">
+                    <img 
+                        src="assets/images/OIP.jpg"
+                        alt="Plato italiano" 
+                        class="w-full h-64 object-cover"
+                    >
+                    <div class="p-4 bg-white">
+                        <p class="text-gray-700 text-center">Italia: Pasta fresca con trufa</p>
+                    </div>
+                </div>
+
+                <!-- Imagen 2 -->
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition">
+                    <img 
+                        src="assets/images/descarga.jpg" 
+                        alt="Sushi japonés" 
+                        class="w-full h-64 object-cover"
+                    >
+                    <div class="p-4 bg-white">
+                        <p class="text-gray-700 text-center">Japón: Sushi tradicional</p>
+                    </div>
+                </div>
+
+                <!-- Imagen 3 -->
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition">
+                    <img 
+                        src="assets/images/photo-1615870216519-2f9fa575fa5c.avif" 
+                        alt="Tacos mexicanos" 
+                        class="w-full h-64 object-cover"
+                    >
+                    <div class="p-4 bg-white">
+                        <p class="text-gray-700 text-center">México: Tacos al pastor</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Texto sobre gastronomía -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-center">La Gastronomía en el Mundo</h2>
+            <div class="prose max-w-none text-gray-700">
+                <p class="mb-4">
+                    La gastronomía es mucho más que alimentación; es un reflejo de la cultura, historia y tradiciones de cada pueblo. Desde los sabores intensos de la cocina mexicana hasta la delicadeza de la alta cocina francesa, cada plato cuenta una historia única.
+                </p>
+                <p class="mb-4">
+                    En <span class="font-semibold text-amber-600">Sabores del Mundo</span>, creemos que explorar la diversidad culinaria es una forma de conectar con otras culturas. La comida une a las personas, ya sea en un mercado callejero de Tailandia o en un restaurante con estrella Michelin en España.
+                </p>
+                <p>
+                    <span class="font-semibold">¿Sabías que...</span> el hummus es considerado un plato nacional en al menos 7 países del Medio Oriente, o que la pizza napolitana es Patrimonio Cultural Inmaterial de la Humanidad según la UNESCO? ¡Descubre estos datos y más con nosotros!
+                </p>
+            </div>
+        </section>
+
+        <!-- Llamado a la acción -->
+        <section class="text-center py-6 bg-amber-50 rounded-lg">
+            <h3 class="text-xl font-bold mb-2">¿Listo para cocinar?</h3>
+            <p class="mb-4">Explora nuestras recetas y lleva los sabores del mundo a tu cocina.</p>
+            <a href="recetas.html" class="inline-block bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition">
+                Ver recetas <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-4 mt-12">
+        <p>© 2023 Sabores del Mundo - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
+</html>
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores del Mundo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-amber-600 text-white p-4">
+        <h1 class="text-2xl font-bold text-center">SABORES DEL MUNDO</h1>
+        <nav class="relative">
+            <!-- Botón de menú hamburguesa -->
+            <button class="text-white text-2xl md:hidden focus:outline-none absolute top-2 right-4" onclick="toggleMenu()">&#9776;</button>
+            <!-- Menú -->
+            <ul id="menu" class="hidden flex flex-col items-center space-y-2 mt-4 md:flex md:flex-row md:justify-center md:space-x-6 md:mt-0">
+                <li><a href="acerca de.html" class="hover:underline">Acerca de</a></li>
+                <li><a href="recetas.html" class="hover:underline">Recetas</a></li>
+                <li><a href="inicio.html" class="hover:underline">Inicio</a></li>
+                <li><a href="cuenta.html" class="hover:underline">Cuenta</a></li>
+                <li><a href="gastronomía.html" class="hover:underline">Gastronomía</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('hidden');
+        }
+    </script>
+
+    <main class="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+        <h2 class="text-xl font-bold text-center mb-6">LOG IN</h2>
+        <form class="space-y-4">
+            <div>
+                <label class="block text-gray-700">Usuario</label>
+                <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+            </div>
+            <div>
+                <label class="block text-gray-700">Contraseña</label>
+                <input type="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+            </div>
+            <button type="submit" class="w-full bg-amber-600 text-white py-2 rounded-lg hover:bg-amber-700 transition">Ingresar</button>
+        </form>
+        <p class="text-center mt-4">
+            ¿No tienes cuenta? <a href="#" class="text-amber-600 hover:underline">Sign Up</a>
+        </p>
+    </main>
+</body>
+</html>

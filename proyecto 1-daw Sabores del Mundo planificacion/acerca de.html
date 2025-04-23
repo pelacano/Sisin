@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores del Mundo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-amber-600 text-white p-4">
+        <h1 class="text-2xl font-bold text-center">SABORES DEL MUNDO</h1>
+        <nav class="relative">
+            <!-- Botón de menú hamburguesa -->
+            <button class="text-white text-2xl md:hidden focus:outline-none absolute top-2 right-4" onclick="toggleMenu()">&#9776;</button>
+            <!-- Menú -->
+            <ul id="menu" class="hidden flex flex-col items-center space-y-2 mt-4 md:flex md:flex-row md:justify-center md:space-x-6 md:mt-0">
+                <li><a href="acerca de.html" class="hover:underline">Acerca de</a></li>
+                <li><a href="recetas.html" class="hover:underline">Recetas</a></li>
+                <li><a href="inicio.html" class="hover:underline">Inicio</a></li>
+                <li><a href="cuenta.html" class="hover:underline">Cuenta</a></li>
+                <li><a href="gastronomía.html" class="hover:underline">Gastronomía</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('hidden');
+        }
+    </script>
+
+    <main class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+        <!-- Hero Section -->
+        <section class="relative h-64 overflow-hidden rounded-lg mb-12">
+            <img src="assets/images/photo-1467003909585-2f8a72700288.avif" 
+                 alt="Equipo de cocina" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <h2 class="text-4xl font-bold text-white">Nuestra Historia</h2>
+            </div>
+        </section>
+
+        <!-- Sección 1: Descripción -->
+        <section class="mb-16">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">¿Quiénes somos?</h3>
+                    <p class="text-gray-700 mb-4">
+                        Sabores del Mundo nació en 2020 como un pequeño blog de cocina y hoy es la comunidad gastronómica más diversa de habla hispana, con más de 500.000 usuarios activos mensuales.
+                    </p>
+                    <p class="text-gray-700">
+                        Nuestro equipo está formado por chefs profesionales, antropólogos culinarios y apasionados de la cocina casera, unidos por el objetivo de preservar y compartir tradiciones culinarias.
+                    </p>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg">
+                    <img src="assets/images/photo-1555244162-803834f70033.avif" 
+                         alt="Equipo de Sabores del Mundo" 
+                         class="w-full h-64 object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Misión -->
+        <section class="mb-16 bg-amber-50 p-8 rounded-lg">
+            <h3 class="text-2xl font-bold mb-6 text-center">Nuestra Misión</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center p-4">
+                    <div class="text-amber-600 text-4xl mb-4">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">Preservar culturas</h4>
+                    <p class="text-gray-700">Documentar recetas tradicionales en riesgo de desaparecer.</p>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-amber-600 text-4xl mb-4">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">Educar</h4>
+                    <p class="text-gray-700">Enseñar técnicas culinarias profesionales y caseras.</p>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-amber-600 text-4xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">Conectar</h4>
+                    <p class="text-gray-700">Unir a personas a través de la comida.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Equipo -->
+        <section class="mb-12">
+            <h3 class="text-2xl font-bold mb-8 text-center">Conoce al equipo</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Miembro 1 -->
+                <div class="text-center">
+                    <img src="" 
+                         alt="Chef Pelayo" 
+                         class="w-32 h-32 object-cover rounded-full mx-auto mb-4">
+                    <h4 class="font-bold">Pelayo Cano</h4>
+                    <p class="text-amber-600 mb-1">Chef ejecutivo</p>
+                    <p class="text-sm text-gray-600">Especialista en cocina asiática</p>
+                </div>
+                
+                <!-- Miembro 2 -->
+                <div class="text-center">
+                    <img src="" 
+                         alt="Chef Pelayo" 
+                         class="w-32 h-32 object-cover rounded-full mx-auto mb-4">
+                    <h4 class="font-bold">Pelayo Cano</h4>
+                    <p class="text-amber-600 mb-1">Investigador culinario</p>
+                    <p class="text-sm text-gray-600">Foco en tradiciones africanas</p>
+                </div>
+                
+                <!-- Miembro 3 -->
+                <div class="text-center">
+                    <img src="" 
+                         alt="Fotógrafo Pelayo" 
+                         class="w-32 h-32 object-cover rounded-full mx-auto mb-4">
+                    <h4 class="font-bold">Pelayo Cano</h4>
+                    <p class="text-amber-600 mb-1">Fotógrafo gastronómico</p>
+                    <p class="text-sm text-gray-600">Capturando sabores desde 2015</p>
+                </div>
+                
+                <!-- Miembro 4 -->
+                <div class="text-center"> 
+                    <img src="" 
+                         alt="Editor Pelayo" 
+                         class="w-32 h-32 object-cover rounded-full mx-auto mb-4">
+                    <h4 class="font-bold">Pelayo Cano</h4>
+                    <p class="text-amber-600 mb-1">Editor culinario</p>
+                    <p class="text-sm text-gray-600">Experto en cocina mediterránea</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 4: Colabora -->
+        <section class="bg-gray-800 text-white p-8 rounded-lg">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">¿Quieres colaborar?</h3>
+                    <p class="mb-4">
+                        Buscamos chefs caseros, fotógrafos y escritores gastronómicos para ampliar nuestro contenido.
+                    </p>
+                    <button class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg transition">
+                        Únete al equipo
+                    </button>
+                </div>
+                <div class="rounded-lg overflow-hidden">
+                    <img src="assets/images/photo-1521017432531-fbd92d768814.avif" 
+                         alt="Colabora con nosotros" 
+                         class="w-full h-48 object-cover">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-12">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Sabores del Mundo</h3>
+                <p>Descubre la magia de la cocina global en un solo lugar.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Explorar</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-amber-400 transition">Inicio</a></li>
+                    <li><a href="gastronomia.html" class="hover:text-amber-400 transition">Gastronomías</a></li>
+                    <li><a href="recetas.html" class="hover:text-amber-400 transition">Recetas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Compañía</h4>
+                <ul class="space-y-2">
+                    <li><a href="acerca.html" class="hover:text-amber-400 transition">Acerca de</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition">Contacto</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition">Trabaja con nosotros</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Síguenos</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-2xl hover:text-amber-400 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-2xl hover:text-amber-400 transition"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-2xl hover:text-amber-400 transition"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+            <p>© 2023 Sabores del Mundo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
